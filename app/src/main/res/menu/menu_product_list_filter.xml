@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter_list_white_24dp"
+        android:title="@string/title_filter"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/filter_all"
+                android:icon="@drawable/ic_account_box_black_24dp"
+                android:title="@string/title_all" />
+
+            <item
+                android:id="@+id/filter_electronics"
+                android:icon="@drawable/ic_view_list_black_24dp"
+                android:title="@string/title_electronics" />
+
+            <item
+                android:id="@+id/filter_furniture"
+                android:icon="@drawable/ic_shopping_cart_black_24dp"
+                android:title="@string/title_furniture" />
+        </menu>
+
+    </item>
+
+</menu>

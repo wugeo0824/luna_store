@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">LunaStore</string>
+
+    <string name="title_products">Products</string>
+    <string name="title_cart">My Cart</string>
+    <string name="title_account">Account</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_electronics">Electronics</string>
+    <string name="title_furniture">Furniture</string>
+    <string name="title_all">All</string>
+    <string name="title_detail">Detail</string>
+
+    <string name="account_name">Li Xijun</string>
+    <string name="account_email">xijun824@gmail.com</string>
+    <string name="account_phone">92371851</string>
+
+    <string name="cart_empty_instruction">EMPTY CART</string>
+    <string name="cart_remove">Remove</string>
+    <string name="cart_message_removed">Removed</string>
+    <string name="cart_add_message_success">Successfully added to cart</string>
+    <string name="cart_add_message_failed">Add to cart failed</string>
+</resources>
