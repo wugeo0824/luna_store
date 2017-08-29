@@ -1,7 +1,5 @@
 package com.xjcrepe.lunastore.detail;
 
-import com.xjcrepe.lunastore.dashboard.cart.CartListContract;
-import com.xjcrepe.lunastore.dashboard.cart.CartListPresenter;
 import com.xjcrepe.lunastore.di.ActivityScoped;
 
 import dagger.Binds;

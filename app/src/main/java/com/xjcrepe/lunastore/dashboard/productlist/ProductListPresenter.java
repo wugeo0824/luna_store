@@ -3,10 +3,10 @@ package com.xjcrepe.lunastore.dashboard.productlist;
 import android.support.annotation.Nullable;
 
 import com.xjcrepe.lunastore.R;
-import com.xjcrepe.lunastore.repo.ProductsRepository;
 import com.xjcrepe.lunastore.di.ActivityScoped;
 import com.xjcrepe.lunastore.model.Product;
 import com.xjcrepe.lunastore.model.Product.ProductCategory;
+import com.xjcrepe.lunastore.repo.ProductsRepository;
 import com.xjcrepe.lunastore.repo.SampleData;
 
 import java.util.List;

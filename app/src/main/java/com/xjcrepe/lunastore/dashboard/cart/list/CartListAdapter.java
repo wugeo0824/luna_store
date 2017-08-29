@@ -1,17 +1,12 @@
 package com.xjcrepe.lunastore.dashboard.cart.list;
 
-import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 
 import com.xjcrepe.lunastore.model.Product;
 
 import java.util.List;
-
-import javax.inject.Inject;
 
 /**
  * Created by LiXijun on 2017/8/22.
@@ -24,7 +19,6 @@ public class CartListAdapter extends RecyclerView.Adapter<CartItemViewHolder> {
 
     private CartItemListener cartItemListener;
 
-    @Inject
     public CartListAdapter() {
     }
 
@@ -60,7 +54,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartItemViewHolder> {
         products.remove(index);
         notifyItemRemoved(index);
 
-        if (cartItemListener != null && products.isEmpty()){
+        if (cartItemListener != null && products.isEmpty()) {
             cartItemListener.onCartEmpty();
         }
     }

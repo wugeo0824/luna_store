@@ -19,7 +19,6 @@ import com.xjcrepe.lunastore.dashboard.productlist.list.ProductListAdapter;
 import com.xjcrepe.lunastore.detail.ProductDetailActivity;
 import com.xjcrepe.lunastore.di.ActivityScoped;
 import com.xjcrepe.lunastore.model.Product;
-import com.xjcrepe.lunastore.model.Product.ProductCategory;
 
 import java.util.List;
 
@@ -40,9 +39,6 @@ import static com.xjcrepe.lunastore.model.Product.CATEGORY_FURNITURE;
 
 @ActivityScoped
 public class ProductListFragment extends DaggerFragment implements ProductListContract.View, ProductListAdapter.ItemClickListener {
-
-//    @Inject
-//    ProductDetailActivity.Factory detailActivityFactory;
 
     private static final String KEY_CURRENT_FILTER_CATEGORY = "current_filter";
 

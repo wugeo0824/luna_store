@@ -9,8 +9,6 @@ import com.xjcrepe.lunastore.model.Product;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 /**
  * Created by LiXijun on 2017/8/21.
  */
@@ -23,7 +21,6 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductViewHolder> 
 
     private ItemClickListener itemClickListener;
 
-    @Inject
     public ProductListAdapter() {
     }
 
