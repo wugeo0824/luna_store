@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,7 +27,6 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import dagger.android.support.DaggerFragment;
 
 import static com.xjcrepe.lunastore.detail.ProductDetailActivity.EXTRA_PRODUCT_ID;
 import static com.xjcrepe.lunastore.model.Product.CATEGORY_ALL;
@@ -38,7 +38,7 @@ import static com.xjcrepe.lunastore.model.Product.CATEGORY_FURNITURE;
  */
 
 @ActivityScoped
-public class ProductListFragment extends DaggerFragment implements ProductListContract.View, ProductListAdapter.ItemClickListener {
+public class ProductListFragment extends Fragment implements ProductListContract.View, ProductListAdapter.ItemClickListener {
 
     private static final String KEY_CURRENT_FILTER_CATEGORY = "current_filter";
 
@@ -67,9 +67,9 @@ public class ProductListFragment extends DaggerFragment implements ProductListCo
         presenter.bindView(this);
         if (savedInstanceState != null) {
             int filter = savedInstanceState.getInt(KEY_CURRENT_FILTER_CATEGORY, CATEGORY_ALL);
-            if (filter == CATEGORY_ALL){
+            if (filter == CATEGORY_ALL) {
                 presenter.loadAllProducts();
-            }else {
+            } else {
                 presenter.loadProductsByCategory(filter);
             }
         } else {

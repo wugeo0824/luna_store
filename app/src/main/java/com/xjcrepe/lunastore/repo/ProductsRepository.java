@@ -1,6 +1,7 @@
 package com.xjcrepe.lunastore.repo;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -36,8 +37,8 @@ public class ProductsRepository implements ProductsDataSource {
     };
 
     @Inject
-    public ProductsRepository(ProductsDBHelper dbHelper) {
-        this.dbHelper = dbHelper;
+    public ProductsRepository(Context context) {
+        this.dbHelper = new ProductsDBHelper(context);
     }
 
     @Override
@@ -181,11 +182,11 @@ public class ProductsRepository implements ProductsDataSource {
                 String selection = ProductEntry.COLUMN_NAME_ENTRY_ID + " LIKE ?";
                 String[] selectionArgs = {id};
 
-                db.update(ProductEntry.TABLE_NAME_PRODUCTS, values, selection, selectionArgs);
+                int rows = db.update(ProductEntry.TABLE_NAME_PRODUCTS, values, selection, selectionArgs);
 
                 db.close();
 
-                return true;
+                return rows > 0;
             }
         });
     }

@@ -2,7 +2,6 @@ package com.xjcrepe.lunastore.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.DrawableRes;
 import android.support.annotation.IntDef;
 
 import java.lang.annotation.Retention;
@@ -16,7 +15,7 @@ import java.lang.annotation.RetentionPolicy;
  * Using local image res for now
  */
 
-public final class Product implements Parcelable{
+public class Product implements Parcelable{
 
     public static final int CATEGORY_ELECTRONICS = 100;
     public static final int CATEGORY_FURNITURE = 101;

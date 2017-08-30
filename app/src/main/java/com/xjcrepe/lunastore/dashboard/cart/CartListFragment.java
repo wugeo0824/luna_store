@@ -3,6 +3,7 @@ package com.xjcrepe.lunastore.dashboard.cart;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,13 +22,12 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import dagger.android.support.DaggerFragment;
 
 /**
  * Created by LiXijun on 2017/8/20.
  */
 
-public class CartListFragment extends DaggerFragment implements CartListContract.View, CartListAdapter.CartItemListener{
+public class CartListFragment extends Fragment implements CartListContract.View, CartListAdapter.CartItemListener{
 
     @BindView(R.id.rvCart)
     RecyclerView rvCart;

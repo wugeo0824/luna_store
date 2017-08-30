@@ -38,8 +38,8 @@ public class ProductListPresenterTest {
         MockitoAnnotations.initMocks(this);
         mockData = SampleData.getProductsMockData();
         Single<List<Product>> productsTestObservable = Single.just(mockData);
-        when(productsRepository.getProductsByCategory(anyInt()))
-                .thenReturn(productsTestObservable);
+        when(productsRepository.getProductsByCategory(anyInt())).thenReturn(productsTestObservable);
+
         subject = new ProductListPresenter(productsRepository);
         subject.bindView(productsView);
     }

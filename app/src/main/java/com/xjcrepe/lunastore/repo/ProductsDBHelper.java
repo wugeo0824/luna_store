@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.xjcrepe.lunastore.model.ProductReaderContract;
 
-import javax.inject.Inject;
-
 /**
  * Created by LiXijun on 2017/8/22.
  */
@@ -36,7 +34,6 @@ public class ProductsDBHelper extends SQLiteOpenHelper {
                     ProductReaderContract.ProductEntry.COLUMN_NAME_IN_CART + BOOLEAN_TYPE +
                     " )";
 
-    @Inject
     public ProductsDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

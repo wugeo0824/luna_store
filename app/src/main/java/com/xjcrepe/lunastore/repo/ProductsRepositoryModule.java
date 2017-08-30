@@ -1,5 +1,7 @@
 package com.xjcrepe.lunastore.repo;
 
+import android.content.Context;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -14,7 +16,7 @@ public class ProductsRepositoryModule {
 
     @Provides
     @Singleton
-    public ProductsRepository provideProductsRepository(ProductsDBHelper productsDBHelper) {
-        return new ProductsRepository(productsDBHelper);
+    public ProductsRepository provideProductsRepository(Context context) {
+        return new ProductsRepository(context);
     }
 }
